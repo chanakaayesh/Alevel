@@ -12,13 +12,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.chanaka.alevel.DB_Model.BookModel;
 import com.chanaka.alevel.DB_Model.paper_year;
 import com.chanaka.alevel.DB_Model.section_model;
 import com.chanaka.alevel.R;
-import com.chanaka.alevel.ViewPDF;
-import com.chanaka.alevel.ui.paper_selection.adapter;
-import com.chanaka.alevel.ui.paper_selection.subject_selection;
+import com.chanaka.alevel.ui.ViewPDF.ViewPDF;
 
 import java.util.List;
 

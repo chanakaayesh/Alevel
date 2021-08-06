@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_color"
+    tools:context=".ui.paper_list.showtimetable.display_timetable">
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:background="@color/secondbackground"
+        android:layout_marginRight="@dimen/marg_lft_rght"
+        android:layout_marginLeft="@dimen/marg_lft_rght"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_heightPercent="80%">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/timetable_recycler"
+            />
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

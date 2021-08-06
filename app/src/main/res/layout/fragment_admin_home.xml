@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_color"
+    tools:context=".ui.paperUploader.Admin_home">
+
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/marg_lft_rght"
+        android:layout_marginLeft="@dimen/marg_lft_rght"
+        android:layout_height="wrap_content"
+        android:background="@color/secondbackground"
+        android:layout_centerInParent="true"
+        app:layout_heightPercent="15%">
+        <Space
+            android:id="@+id/s1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="10%"
+
+            />
+        <Button
+            android:text="Time Table"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/textField"
+            android:id="@+id/timeTable_id"
+            android:layout_below="@id/s1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="38.5%"/>
+        <Space
+            android:id="@+id/s2"
+            android:layout_below="@id/timeTable_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="5%"
+
+            />
+        <Button
+            android:text="Paper Upload"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/textField"
+            android:id="@+id/paper_up"
+            android:layout_below="@id/s2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="38.5%"/>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

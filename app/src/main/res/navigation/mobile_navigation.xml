@@ -37,4 +37,14 @@
         android:name="com.chanaka.alevel.ui.paper_list.paper_list"
         android:label="@string/menu_paperlist"
         tools:layout="@layout/fragment_paper_list" />
+    <fragment
+        android:id="@+id/nav_admin_home"
+        android:name="com.chanaka.alevel.ui.paperUploader.Admin_home"
+        android:label="@string/menu_adminhomr"
+        tools:layout="@layout/fragment_admin_home" />
+    <fragment
+        android:id="@+id/nav_display_timetable"
+        android:name="com.chanaka.alevel.ui.paper_list.showtimetable.display_timetable"
+        android:label="@string/menu_displaytimetable"
+        tools:layout="@layout/fragment_display_timetable" />
 </navigation>

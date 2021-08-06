@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.paper_list.timeTable_upload">
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:layout_marginRight="@dimen/marg_lft_rght"
+        android:layout_marginLeft="@dimen/marg_lft_rght"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="80%">
+       <Space
+           android:id="@+id/s1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_heightPercent="5%"/>
+
+        <ImageView
+            android:layout_below="@+id/s1"
+            android:id="@+id/timetable_image"
+            android:background="@drawable/imageviewicon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="60%"/>
+
+        <Space
+            android:layout_below="@id/timetable_image"
+            android:id="@+id/s2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="5%"/>
+        <EditText
+
+            android:id="@+id/timetable_name"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+              android:background="#E4F6CF06"
+            android:backgroundTint="@null"
+            android:hint="Subject name"
+            android:textAlignment="center"
+            android:layout_below="@+id/s2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="10%"
+
+            android:gravity="center_vertical"
+            tools:ignore="RtlCompat" />
+        <Space
+            android:layout_below="@id/timetable_name"
+            android:id="@+id/s3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="5%"/>
+        <Button
+            android:id="@+id/up_timetable"
+            android:background="@color/textField"
+            android:textColor="@color/white"
+            android:text="Submit"
+            android:textStyle="bold"
+            android:layout_below="@+id/s3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="10%"/>
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>
