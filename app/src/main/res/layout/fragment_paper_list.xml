@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.paper_list.paper_list">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:background="@color/secondbackground"
+        android:layout_marginRight="@dimen/marg_lft_rght"
+        android:layout_marginLeft="@dimen/marg_lft_rght"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="80%">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/paper_year_recyler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

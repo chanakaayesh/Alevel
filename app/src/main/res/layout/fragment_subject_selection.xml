@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_color"
+    tools:context=".ui.paper_selection.subject_selection">
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:id="@+id/main1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/secondbackground"
+        android:layout_marginRight="@dimen/marg_lft_rght"
+        android:layout_marginLeft="@dimen/marg_lft_rght"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="30%">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="@dimen/marg_lft_rght"
+            android:layout_marginRight="@dimen/marg_lft_rght"
+            android:id="@+id/sub_selection_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

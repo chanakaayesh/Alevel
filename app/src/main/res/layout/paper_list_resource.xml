@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_heightPercent="10%"
+
+
+    >
+    <Button
+        android:id="@+id/paper_list_year_b"
+        android:layout_marginTop="5dp"
+        android:background="@color/textField"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlCompat" />
+</androidx.percentlayout.widget.PercentRelativeLayout>
