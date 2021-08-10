@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/homeicon"
+
+            android:icon="@drawable/homeicons"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_display_timetable"
-            android:icon="@drawable/timetableicon"
+            android:icon="@drawable/time"
+
             android:title="Time Table" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+
         <item
 
             android:id="@+id/nav_admin_home"
-            android:icon="@drawable/adminicon"
+            android:icon="@drawable/user"
             android:title="Admin" />
     </group>
 </menu>
