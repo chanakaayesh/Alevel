@@ -83,7 +83,7 @@ public class paper_uploader extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
 
-        String [] paperType_vales = {"Part one ","Part Two"," P-I's Answer","P-II' Answers"};
+        String [] paperType_vales = {"Part one ","Part Two","Answer"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this.getActivity(), android.R.layout.simple_spinner_item,paperType_vales);
         adapter2.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner_papertype.setAdapter(adapter2);
