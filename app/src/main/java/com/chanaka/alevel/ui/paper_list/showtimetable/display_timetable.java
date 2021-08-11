@@ -3,6 +3,7 @@ package com.chanaka.alevel.ui.paper_list.showtimetable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,6 +34,8 @@ public class display_timetable extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Exam TimeTable");
         // Inflate the layout for this fragment
        View view= inflater.inflate(R.layout.fragment_display_timetable, container, false);
         recyclerView=(RecyclerView) view.findViewById(R.id.timetable_recycler);

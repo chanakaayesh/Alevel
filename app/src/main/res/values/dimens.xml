@@ -7,4 +7,7 @@
     <dimen name="marg_lft_rght">8dp</dimen>
 
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="button_dimen">8%</dimen>
+    <dimen name="Edittext_dimen">6%</dimen>
+    <dimen name="space_dimen">1%</dimen>
 </resources>

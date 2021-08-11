@@ -38,14 +38,14 @@
             android:id="@+id/timetable_name"
             android:textStyle="bold"
             android:textColor="@color/white"
-              android:background="#E4F6CF06"
+              android:background="@drawable/edit_text_back"
             android:backgroundTint="@null"
             android:hint="Subject name"
             android:textAlignment="center"
             android:layout_below="@+id/s2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_heightPercent="10%"
+            app:layout_heightPercent="6%"
 
             android:gravity="center_vertical"
             tools:ignore="RtlCompat" />
@@ -57,14 +57,14 @@
             app:layout_heightPercent="5%"/>
         <Button
             android:id="@+id/up_timetable"
-            android:background="@color/textField"
+            android:background="@drawable/button_back"
             android:textColor="@color/white"
             android:text="Submit"
             android:textStyle="bold"
-            android:layout_below="@+id/s3"
+           android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_heightPercent="10%"/>
+            app:layout_heightPercent="7%"/>
     </androidx.percentlayout.widget.PercentRelativeLayout>
 
 

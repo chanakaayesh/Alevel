@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.percentlayout.widget.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_color"
+    tools:context=".ui.adminLogin.Admin_login">
+
+    <!-- TODO: Update blank fragment layout -->
+ <androidx.percentlayout.widget.PercentRelativeLayout
+     android:layout_marginRight="@dimen/marg_lft_rght"
+     android:layout_marginLeft="@dimen/marg_lft_rght"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@color/secondbackground"
+     >
+
+     <Button
+         android:layout_marginBottom="10dp"
+         android:layout_alignParentBottom="true"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_heightPercent="8%"
+         android:background="@drawable/button_back"
+         android:text="Login"
+         android:inputType="text"
+         android:id="@+id/login_button"
+         />
+
+     <EditText
+
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_heightPercent="6%"
+         android:backgroundTint="@null"
+         android:background="@drawable/edit_text_back"
+         android:layout_centerVertical="true"
+         android:hint="User name"
+         android:textAlignment="center"
+         android:gravity="center_vertical"
+         tools:ignore="RtlCompat"
+         android:textColor="@color/white"
+         android:textStyle="bold"
+         android:id="@+id/user_name"
+         />
+     <Space
+        android:layout_below="@id/user_name"
+         android:id="@+id/s1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:layout_heightPercent="2%"/>
+     <EditText
+         android:layout_below="@id/s1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         app:layout_heightPercent="6%"
+         android:backgroundTint="@null"
+         android:background="@drawable/edit_text_back"
+         android:layout_centerVertical="true"
+         android:hint="Password"
+         android:textAlignment="center"
+         android:gravity="center_vertical"
+         tools:ignore="RtlCompat"
+         android:textColor="@color/white"
+         android:textStyle="bold"
+         android:inputType="textPassword"
+         android:id="@+id/user_pw"
+         />
+ </androidx.percentlayout.widget.PercentRelativeLayout>
+
+
+
+
+</androidx.percentlayout.widget.PercentRelativeLayout>

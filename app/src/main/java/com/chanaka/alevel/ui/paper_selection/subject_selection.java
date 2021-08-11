@@ -47,6 +47,16 @@ public class subject_selection extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        if(models.getName().toString().equals("Commaz")){
+            //commerce
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("commerce");
+        }
+        else{
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(models.getName().toString());
+        }
+
+
         View view = inflater.inflate(R.layout.fragment_subject_selection, container, false);
 
         sub_selcecter_recycler=(RecyclerView) view.findViewById(R.id.sub_selection_recycler);

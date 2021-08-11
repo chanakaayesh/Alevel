@@ -11,9 +11,10 @@
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_subjectSelection">Selcting Subject</string>
-    <string name="menu_uploder">section</string>
-    <string name="menu_paperlist">paper_list</string>
+    <string name="menu_uploder">Section</string>
+    <string name="menu_paperlist">Paper_list</string>
     <string name="menu_adminhomr">Admin</string>
+    <string name="menu_andminlogin">Login</string>
     <string name="menu_displaytimetable">Time Table</string>
 
     <string name="spinner_title">section</string>

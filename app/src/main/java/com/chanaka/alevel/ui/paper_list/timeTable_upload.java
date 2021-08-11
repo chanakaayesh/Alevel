@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.provider.MediaStore;
@@ -48,6 +49,7 @@ public class timeTable_upload extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("TimeTable Upload");
        View view= inflater.inflate(R.layout.fragment_time_table_upload, container, false);
        time_subject=(EditText) view.findViewById(R.id.timetable_name);
        timetableImage=(ImageView) view.findViewById(R.id.timetable_image);

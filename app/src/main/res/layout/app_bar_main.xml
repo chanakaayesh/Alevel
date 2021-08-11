@@ -16,17 +16,24 @@
         <androidx.appcompat.widget.Toolbar
 
             android:id="@+id/toolbar"
+
             app:titleTextColor="@color/textField"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/secondbackground"
 
+
             app:navigationIconTint="@color/textField"
 
             app:popupTheme="@style/ThemeOverlay.MyTheme"
+            android:layout_gravity="center"
+           >
+
+        </androidx.appcompat.widget.Toolbar>
 
 
-            />
+
+
 
     </com.google.android.material.appbar.AppBarLayout>
 

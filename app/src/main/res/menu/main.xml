@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <item
+        android:visible="false"
         android:id="@+id/action_settings"
         android:orderInCategory="100"
 
@@ -11,4 +13,6 @@
         app:popupTheme="@color/textField"
         android:title="@string/action_settings"
        />
+
+
 </menu>

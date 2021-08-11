@@ -3,6 +3,7 @@ package com.chanaka.alevel.ui.paper_list;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -46,6 +47,8 @@ public class paper_list extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Papers");
         // Inflate the layout for this fragment
        View view=  inflater.inflate(R.layout.fragment_paper_list, container, false);
        submodel =new section_model();

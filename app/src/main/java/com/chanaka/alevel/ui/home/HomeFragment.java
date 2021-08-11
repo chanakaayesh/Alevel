@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -58,6 +59,8 @@ public class HomeFragment extends Fragment {
     section_model smodel;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
+
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         maths_b =(ImageView) root.findViewById(R.id.maths_b);
@@ -100,8 +103,9 @@ public class HomeFragment extends Fragment {
         maths_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                smodel.setName("Maths");
+              /*  smodel.setName("Maths");*/
 
+                nextpage("Maths");
          /*       Fragment someFragment = new subject_selection();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.nav_host_fragment, someFragment ); // give your fragment container id in first parameter
@@ -114,21 +118,23 @@ public class HomeFragment extends Fragment {
         bio_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                smodel.setName("Bio");
-
+              /*  smodel.setName("Bio");
+*/
          /*       Fragment someFragment = new subject_selection();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
                 transaction.replace(R.id.nav_host_fragment, someFragment ); // give your fragment container id in first parameter
                 transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
                 transaction.commit();
                 nextpage("Maths");*/
+
+                nextpage("Bio");
             }
         });
 
       commers_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                smodel.setName("Commaz");
+                /*smodel.setName("Commaz");*/
 
          /*       Fragment someFragment = new subject_selection();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
@@ -136,6 +142,8 @@ public class HomeFragment extends Fragment {
                 transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
                 transaction.commit();
                 nextpage("Maths");*/
+
+                nextpage("Commaz");
             }
         });
 
@@ -143,7 +151,7 @@ public class HomeFragment extends Fragment {
         art_b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                smodel.setName("Art");
+            /*    smodel.setName("Art");*/
 
          /*       Fragment someFragment = new subject_selection();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
@@ -151,6 +159,8 @@ public class HomeFragment extends Fragment {
                 transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
                 transaction.commit();
                 nextpage("Maths");*/
+
+                nextpage("Art");
             }
         });
 

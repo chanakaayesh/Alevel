@@ -1,7 +1,9 @@
 package com.chanaka.alevel.ui.paperUploader;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -24,6 +26,8 @@ public class Admin_home extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Admin Home");
+
         // Inflate the layout for this fragment
        View view= inflater.inflate(R.layout.fragment_admin_home, container, false);
        timetable =(Button) view.findViewById(R.id.timeTable_id);

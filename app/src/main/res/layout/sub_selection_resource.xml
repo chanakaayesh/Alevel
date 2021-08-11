@@ -10,7 +10,7 @@
     <Button
         android:id="@+id/select_sub"
         android:layout_marginTop="5dp"
-        android:background="@color/textField"
+        android:background="@drawable/button_back"
         android:textAlignment="center"
         android:gravity="center_vertical"
         android:textColor="@color/white"
