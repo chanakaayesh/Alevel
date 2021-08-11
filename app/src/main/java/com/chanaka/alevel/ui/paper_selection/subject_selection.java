@@ -48,6 +48,9 @@ public class subject_selection extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+
+
+
         if(models.getName().toString().equals("Commaz")){
             //commerce
             ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("commerce");

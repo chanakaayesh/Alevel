@@ -21,7 +21,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="#EDCE2D"
-                    android:layout_centerInParent="true"
+                    android:layout_above="@id/ns1"
                     >
                     <Spinner
 
@@ -31,9 +31,33 @@
                         android:prompt="@string/spinner_title"/>
 
                 </RelativeLayout>
+
+                <Space
+                    android:id="@+id/ns1"
+                    android:layout_above="@id/rl2"
+                    app:layout_heightPercent="1%"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <RelativeLayout
+                    android:id="@+id/rl2"
+                    app:layout_heightPercent="6%"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#EDCE2D"
+                    android:layout_centerInParent="true"
+                    >
+                    <Spinner
+
+                        android:id="@+id/spinner_papertype"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:prompt="@string/spinner_title"/>
+
+                </RelativeLayout>
                 <Space
                     android:id="@+id/s1"
-                    android:layout_below="@id/rl1"
+                    android:layout_below="@id/rl2"
                     app:layout_heightPercent="1%"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

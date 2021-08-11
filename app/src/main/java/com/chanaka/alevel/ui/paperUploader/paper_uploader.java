@@ -68,6 +68,7 @@ public class paper_uploader extends Fragment {
 
         imageView=(ImageView)root.findViewById(R.id.pdf);
         Spinner spinner = (Spinner) root.findViewById(R.id.spinner);
+        Spinner spinner_papertype = (Spinner) root.findViewById(R.id.spinner_papertype);
 
         mDatabaseReference = FirebaseDatabase.getInstance().getReference("Paper");
         readData();
@@ -76,11 +77,17 @@ public class paper_uploader extends Fragment {
         // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
         String [] values =
-                {"Bio","Maths","Commaz","Art"};
+                {"Bio","Maths","Commerce","Art"};
         // Creating adapter for spinner
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this.getActivity(), android.R.layout.simple_spinner_item, values);
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
+
+        String [] paperType_vales = {"Part one ","Part Two"," P-I's Answer","P-II' Answers"};
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this.getActivity(), android.R.layout.simple_spinner_item,paperType_vales);
+        adapter2.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        spinner_papertype.setAdapter(adapter2);
+
 
         storageReference = FirebaseStorage.getInstance().getReference("PaperPDF");
         databaseReference = FirebaseDatabase.getInstance().getReference("Paper");
@@ -107,8 +114,9 @@ public class paper_uploader extends Fragment {
                                     bookModel.setSubject(subject.getText().toString());
                                     bookModel.setYear(Integer.parseInt(year.getText().toString()));
                                     bookModel.setSection(section);
+                                    bookModel.setPapaer_type(spinner_papertype.getSelectedItem().toString());
                                     bookModel.setBooktImageUrk(uri.toString());
-                                    databaseReference.child(section).child(subject.getText().toString()).child(year.getText().toString()).setValue(bookModel);
+                                    databaseReference.child(section).child(subject.getText().toString()).child(year.getText().toString()).child(spinner_papertype.getSelectedItem().toString()).setValue(bookModel);
                                     Toast.makeText(getActivity().getApplicationContext(),"Success fully added",Toast.LENGTH_LONG).show();
                                     subject.setText("");
                                     year.setText("");

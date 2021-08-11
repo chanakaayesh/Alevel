@@ -39,8 +39,8 @@ public class Admin_home extends Fragment {
                Fragment someFragment = new timeTable_upload();
 
                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-               transaction.replace(R.id.nav_host_fragment, someFragment ); // give your fragment container id in first parameter
-               transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
+               transaction.replace(R.id.nav_host_fragment, someFragment,"Admin_home" ); // give your fragment container id in first parameter
+               transaction.addToBackStack("Admin_home");  // if written, this transaction will be added to backstack
                transaction.commit();
 
            }
@@ -49,6 +49,8 @@ public class Admin_home extends Fragment {
        PaperUp.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+
+
                Fragment someFragment = new paper_uploader();
 
                FragmentTransaction transaction = getFragmentManager().beginTransaction();

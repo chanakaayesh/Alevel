@@ -6,6 +6,15 @@ package com.chanaka.alevel.DB_Model;
     public  static String name;
     public  static String coresubject;
     public static  int year;
+    public  static  String paper_type;
+
+     public static String getPaper_type() {
+         return paper_type;
+     }
+
+     public static void setPaper_type(String paper_type) {
+         section_model.paper_type = paper_type;
+     }
 
      public static int getYear() {
          return year;

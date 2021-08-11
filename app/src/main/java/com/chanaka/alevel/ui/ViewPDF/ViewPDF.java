@@ -54,7 +54,7 @@ public class ViewPDF extends Fragment {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));*/
         pdfView= (com.github.barteksc.pdfviewer.PDFView) view.findViewById(R.id.pdfview);
        // mRef = FirebaseDatabase.getInstance().getReference("Paper").child(models.getName()).child(models.getCoresubject()).child(String.valueOf(models.getYear())).child("booktImageUrk");
-        mRef = FirebaseDatabase.getInstance().getReference("Paper").child(models.getName()).child(models.getCoresubject()).child(String.valueOf(models.getYear()));
+        mRef = FirebaseDatabase.getInstance().getReference("Paper").child(models.getName()).child(models.getCoresubject()).child(String.valueOf(models.getYear())).child(models.getPaper_type());
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

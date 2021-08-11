@@ -52,4 +52,15 @@
         android:name="com.chanaka.alevel.ui.adminLogin.Admin_login"
         android:label="@string/menu_andminlogin"
         tools:layout="@layout/fragment_admin_login" />
+    <fragment
+        android:id="@+id/timeTable_upload"
+
+        android:name="com.chanaka.alevel.ui.paper_list.timeTable_upload"
+        android:label="@string/menu_timtableUpload"
+        tools:layout="@layout/fragment_time_table_upload"/>
+    <fragment
+        android:id="@+id/nav_paper_type"
+        android:name="com.chanaka.alevel.ui.paper_list.paper_type.paper_type"
+        android:label="@string/menu_papertype"
+        tools:layout="@layout/fragment_paper_type" />
 </navigation>

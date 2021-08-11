@@ -109,7 +109,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:text="Commers"
+            android:text="Commerce"
             android:gravity="center_vertical"
             tools:ignore="RtlCompat" />
         <Space
@@ -145,7 +145,7 @@
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:text="Commers"
+            android:text="Art"
             android:gravity="center_vertical"
             tools:ignore="RtlCompat" />
         <Space

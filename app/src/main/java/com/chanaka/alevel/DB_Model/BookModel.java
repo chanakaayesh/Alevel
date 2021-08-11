@@ -15,7 +15,15 @@ public class BookModel {
     private   int     year;
     private   String  booktImageUrk;
     private   String  key_;
+    private   String papaer_type;
 
+    public String getPapaer_type() {
+        return papaer_type;
+    }
+
+    public void setPapaer_type(String papaer_type) {
+        this.papaer_type = papaer_type;
+    }
 
     public String getKey_() {
         return key_;
