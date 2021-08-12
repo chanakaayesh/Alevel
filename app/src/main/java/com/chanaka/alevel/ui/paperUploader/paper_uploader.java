@@ -60,6 +60,7 @@ public class paper_uploader extends Fragment {
 
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Upload Paper");
       View root = inflater.inflate(R.layout.fragment_paper_uploader, container, false);
+      progressDialog = new ProgressDialog(getActivity());
 
 
         insert_book=(Button) root.findViewById(R.id.book_insert);
@@ -83,7 +84,7 @@ public class paper_uploader extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(adapter);
 
-        String [] paperType_vales = {"Part one ","Part Two","Answer"};
+        String [] paperType_vales = {"Part One","Part Two"," Answer","Part One Old Syllabus","Part Two Old Syllabus","Answer Old Syllabus"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this.getActivity(), android.R.layout.simple_spinner_item,paperType_vales);
         adapter2.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner_papertype.setAdapter(adapter2);
@@ -95,9 +96,12 @@ public class paper_uploader extends Fragment {
         insert_book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //
 
                 if(FilePathUri != null && subject.getText().toString().length() !=0
                          && year.getText().toString().length() !=0) {
+                    progressDialog.setTitle("File is Uploading...");
+                    progressDialog.show();
                     final StorageReference storageReference1 =storageReference.child(System.currentTimeMillis() + "."+GetFileExtension(FilePathUri));
                     storageReference1.putFile(FilePathUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -107,7 +111,9 @@ public class paper_uploader extends Fragment {
                                 @Override
                                 public void onSuccess(Uri uri) {
 
+                                    String Uris =uri.toString();
                                     String section = spinner.getSelectedItem().toString() ;
+
                                     String key = databaseReference.push().getKey();
                                     bookModel =new BookModel();
                                     bookModel.setId(year.getText().toString());
@@ -115,8 +121,16 @@ public class paper_uploader extends Fragment {
                                     bookModel.setYear(Integer.parseInt(year.getText().toString()));
                                     bookModel.setSection(section);
                                     bookModel.setPapaer_type(spinner_papertype.getSelectedItem().toString());
-                                    bookModel.setBooktImageUrk(uri.toString());
-                                    databaseReference.child(section).child(subject.getText().toString()).child(year.getText().toString()).child(spinner_papertype.getSelectedItem().toString()).setValue(bookModel);
+                                    bookModel.setBooktImageUrk(Uris);
+                                    if((section.equals("Maths") || section.equals("Bio")) && (subject.getText().toString().equals("chemistry") || subject.getText().toString().equals("physics"))){
+
+                                        databaseReference.child("Maths").child(subject.getText().toString()).child(year.getText().toString()).child(spinner_papertype.getSelectedItem().toString()).setValue(bookModel);
+                                        databaseReference.child("Bio").child(subject.getText().toString()).child(year.getText().toString()).child(spinner_papertype.getSelectedItem().toString()).setValue(bookModel);
+                                    }
+                                    else{
+                                        databaseReference.child(section).child(subject.getText().toString()).child(year.getText().toString()).child(spinner_papertype.getSelectedItem().toString()).setValue(bookModel);
+                                    }
+
                                     Toast.makeText(getActivity().getApplicationContext(),"Success fully added",Toast.LENGTH_LONG).show();
                                     subject.setText("");
                                     year.setText("");
@@ -124,6 +138,7 @@ public class paper_uploader extends Fragment {
 
 
                                     System.out.println("it is working");
+                                    progressDialog.dismiss();
 
 
                                 }

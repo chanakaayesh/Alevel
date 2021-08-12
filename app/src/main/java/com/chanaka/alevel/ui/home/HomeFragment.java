@@ -89,7 +89,7 @@ public class HomeFragment extends Fragment {
         commerstext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nextpage("Commaz");
+                nextpage("Commerce");
             }
         });
         arttext.setOnClickListener(new View.OnClickListener() {
@@ -143,7 +143,7 @@ public class HomeFragment extends Fragment {
                 transaction.commit();
                 nextpage("Maths");*/
 
-                nextpage("Commaz");
+                nextpage("Commerce");
             }
         });
 

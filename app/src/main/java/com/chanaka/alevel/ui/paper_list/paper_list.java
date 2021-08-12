@@ -1,5 +1,6 @@
 package com.chanaka.alevel.ui.paper_list;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +46,7 @@ public class paper_list extends Fragment {
     DatabaseReference mDatabase;
     //public  static getkey_model pdfModel;
     section_model models;
+    ProgressDialog progressBar;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -51,6 +54,7 @@ public class paper_list extends Fragment {
         ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Papers");
         // Inflate the layout for this fragment
        View view=  inflater.inflate(R.layout.fragment_paper_list, container, false);
+       progressBar =new ProgressDialog(getActivity());
        submodel =new section_model();
 
 
@@ -73,9 +77,12 @@ public class paper_list extends Fragment {
         super.onStart();
 
         if(mDatabase !=null){
+
             mDatabase.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+
 
            /*         if(!snapshot.exists()){}
                     else {
@@ -96,12 +103,15 @@ public class paper_list extends Fragment {
                         keys_   =postsnapshot.getValue(paper_year.class);
                         keys_.setPaper_year(postsnapshot.getKey());
                         pdflist.add(keys_);
+
                     }
 
                        paper_list fragment =new paper_list();
                         FragmentManager fragmentManager = getFragmentManager();
                         adapter_ = new paper_list_adapter(getContext(),pdflist,fragmentManager);
                         recycler.setAdapter(adapter_);}
+
+                    progressBar.dismiss();
 
 
                 }

@@ -46,7 +46,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_heightPercent="6%"
-
+            android:inputType="text"
+            android:imeOptions="actionDone"
             android:gravity="center_vertical"
             tools:ignore="RtlCompat" />
         <Space

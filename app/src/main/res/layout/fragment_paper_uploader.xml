@@ -74,6 +74,8 @@
                     android:background="@drawable/edit_text_back"
                     android:backgroundTint="@null"
                     android:hint="Subject name"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
                     android:textAlignment="center"
 
 
@@ -103,7 +105,7 @@
                     android:textColor="@color/white"
                     android:background="@drawable/edit_text_back"
                     android:backgroundTint="@null"
-
+                    android:imeOptions="actionDone"
                     android:gravity="center_horizontal" />
 
                 <Space
@@ -134,6 +136,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     />
+
+
                 <Button
 
 
@@ -148,6 +152,10 @@
 
                     android:gravity="center_vertical"
                     tools:ignore="OnClick,RtlCompat" />
+
+
+
+
 
             </androidx.percentlayout.widget.PercentRelativeLayout>
 

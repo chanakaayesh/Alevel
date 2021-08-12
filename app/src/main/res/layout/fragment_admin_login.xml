@@ -42,6 +42,9 @@
          tools:ignore="RtlCompat"
          android:textColor="@color/white"
          android:textStyle="bold"
+         android:inputType="text"
+         android:imeOptions="actionNext"
+
          android:id="@+id/user_name"
          />
      <Space
@@ -65,6 +68,7 @@
          android:textColor="@color/white"
          android:textStyle="bold"
          android:inputType="textPassword"
+         android:imeOptions="actionDone"
          android:id="@+id/user_pw"
          />
  </androidx.percentlayout.widget.PercentRelativeLayout>
